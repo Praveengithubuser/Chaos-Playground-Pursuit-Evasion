@@ -6,10 +6,11 @@ This project models a pursuit-evasion game in a discrete 20x20 grid using reinfo
 
 ## Implementation Strategies
 1. **Mean Field Method**: 
-   - Each pursuer uses these actions of some the other pursuers to create a an effective Mean Field agent according to the Mean Field Theory.
+   - In this implementation, all the pursuers know the actions (not positions) of the other pursuers which are within a certain radius of that pursuer.
+   - Each pursuer uses these actions of some the other pursuers to create a an effective Mean Field agent according to the Mean Field Theory
    - Highly scalable for a large number of agents.
 2. **Full State Approach**:
-   - All pursuers knows the positions of all the other pursuers.
+   - All pursuers knows the positions of all the other pursuers. 
    - Accompanied with curse of dimensionality, hence not very scalable.
 ## Training Method
 - **Deep Q-Network (DQN)**: 
